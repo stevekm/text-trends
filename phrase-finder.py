@@ -44,8 +44,6 @@ def doc_dict(text_file, chunk_size):
             for phrase in sentence_phrases:
                 phrase_dict[phrase] += 1
     return phrase_dict
-    # for key, value in phrase_dict.items():
-    #     print value, '\t', key
 
 def split_words(sentence):
     # split line into words
@@ -123,10 +121,6 @@ line2 = "All day long we seemed to dawdle through a country which was full of be
 
 
 # my_debugger()
-# print split_sentences(line = line2)
-# print_doc(text_file = text_file)
-
-# print chunk_comninator(line1, 4, ' ')
 text_dict = doc_dict(text_file, 5)
 bad_keys = []
 for key, value in text_dict.iteritems():
@@ -137,24 +131,3 @@ for key in bad_keys:
 
 for key, value in sorted(text_dict.items(), key=lambda x: x[1], reverse=True):
     print value, '\t', key
-# print sort_dict(text_dict)
-# phrase_dict = defaultdict(int)
-# phrase_list = []
-# for size in xrange(3,6):
-#     phrases = make_chunk_list(line1, size, ' ')
-#     print "PHRASES ARE:", phrases
-#     for phrase in phrases:
-#         print "PHRASE IS:", phrase
-#         # phrase_list.append(phrase)
-#         # print "\n".join(s for s in mylist if sub.lower() in s.lower())
-#         if len(phrase_list) < 1 :
-#             phrase_list.append(phrase)
-#         for item in phrase_list:
-#             print "ITEM IS:", item
-#             if phrase not in item:
-#                 print phrase
-#                 phrase_list.append(phrase)
-#         # phrase_dict[phrase] += 1
-#
-# for key, value in phrase_dict.items():
-#     print value, '\t', key
